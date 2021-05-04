@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 body {
     margin: 0px;
     background-color: #333447;
@@ -38,4 +40,16 @@ body {
     background-color: transparent;
     width: 11.11%;
     height: 100%;
+    align-content: center;
+}
+
+.cell-value {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-size: xx-large;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
