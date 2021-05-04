@@ -1,0 +1,41 @@
+body {
+    margin: 0px;
+    background-color: #333447;
+    color: #ededed;
+}
+
+/* Delete margin for now. Change this when up to laying stuff out. Might want to redo id as well*/
+#top-elem {
+    margin: 0px;
+}
+
+#game {
+    padding: 10px;
+}
+
+#board {
+    position: relative;
+    width: 450px;
+    height: 450px;
+}
+
+#board-layout {
+    position: absolute;
+    width: inherit;
+    border: 1px solid #ffffff;
+}
+
+.row {
+    background-color: transparent;
+    display: flex;
+    width: inherit;
+    height: 11.11%;
+    margin: 0px;
+    padding: 0px 1px;
+}
+
+.row > .cell {
+    background-color: transparent;
+    width: 11.11%;
+    height: 100%;
+}
