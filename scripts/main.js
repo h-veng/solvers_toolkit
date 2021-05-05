@@ -6,13 +6,10 @@ function generateGameHTML () {
     board.id = "board";
     game.appendChild(board);
 
-    let canvas = document.createElement("canvas");
-    canvas.id = "board-layout";
-    canvas.width = 900;
-    canvas.height = 900;
-    let canvasError = document.createTextNode("Your browser does not support the html canvas tag.");
-    canvas.appendChild(canvasError);
-    board.appendChild(canvas);
+    let boardLayout = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    boardLayout.id = "board-layout";
+    boardLayout.setAttribute("viewBox", "0 0 900 900");
+    board.appendChild(boardLayout);
 
     for(let i = 0; i < 9; i++) {
         let row = document.createElement("div");

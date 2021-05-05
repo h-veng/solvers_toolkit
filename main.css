@@ -17,12 +17,13 @@ body {
 
 #board {
     position: relative;
-    width: 450px;
-    height: 450px;
+    height: 90vh;
+    width: 90vh;
 }
 
 #board-layout {
     position: absolute;
+    height: inherit;
     width: inherit;
     border: 1px solid #ffffff;
 }
@@ -52,4 +53,14 @@ body {
     font-size: xx-large;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
+}
+
+.line-cell {
+    stroke: #ffffff;
+    stroke-width: 2;
+}
+
+.line-box {
+    stroke: #ffffff;
+    stroke-width: 4;
 }

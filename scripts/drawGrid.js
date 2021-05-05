@@ -1,23 +1,30 @@
-function drawGrid () {
-    let c = document.getElementById("board-layout");
-    let ctx = c.getContext("2d");
-
-    ctx.strokeStyle = "#ffffff";
+function drawSudokuGrid (sideLength) {
+    let boardLayout = document.getElementById("board-layout");
+    let u = sideLength/9;
     for(let i = 1; i < 9; i++) {
-        if (i % 3 == 0) {
-            ctx.lineWidth = "4";
+        let vLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        let lineClass = "";
+        if(i % 3 == 0) {
+            lineClass = "line-box";
         } else {
-            ctx.lineWidth = "2";
+            lineClass = "line-cell";
         }
-        ctx.beginPath();
-        ctx.moveTo(i*100, 0);
-        ctx.lineTo(i*100, 900);
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.moveTo(0, i*100);
-        ctx.lineTo(900, i*100);
-        ctx.stroke();
+
+        vLine.setAttribute("x1", u*i);
+        vLine.setAttribute("y1", 0);
+        vLine.setAttribute("x2", u*i);
+        vLine.setAttribute("y2", sideLength);
+        vLine.setAttribute("class", lineClass);
+        boardLayout.appendChild(vLine);
+
+        let hLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        hLine.setAttribute("x1", 0);
+        hLine.setAttribute("y1", u*i);
+        hLine.setAttribute("x2", sideLength);
+        hLine.setAttribute("y2", u*i);
+        hLine.setAttribute("class", lineClass);
+        boardLayout.appendChild(hLine);
     }
 }
 
-drawGrid();
+drawSudokuGrid(900);
