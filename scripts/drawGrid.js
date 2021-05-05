@@ -1,9 +1,9 @@
 function drawGrid () {
-    var c = document.getElementById("board-layout");
-    var ctx = c.getContext("2d");
+    let c = document.getElementById("board-layout");
+    let ctx = c.getContext("2d");
 
     ctx.strokeStyle = "#ffffff";
-    for(var i = 1; i < 9; i++) {
+    for(let i = 1; i < 9; i++) {
         if (i % 3 == 0) {
             ctx.lineWidth = "4";
         } else {
