@@ -1,8 +1,8 @@
 function generateGameHTML () {
-    var game = document.createElement("div");
+    let game = document.createElement("div");
     game.id = "game";
 
-    var board = document.createElement("div");
+    let board = document.createElement("div");
     board.id = "board";
     game.appendChild(board);
 
@@ -11,13 +11,13 @@ function generateGameHTML () {
     boardLayout.setAttribute("viewBox", "0 0 900 900");
     board.appendChild(boardLayout);
 
-    for(var i = 0; i < 9; i++) {
-        var row = document.createElement("div");
+    for(let i = 0; i < 9; i++) {
+        let row = document.createElement("div");
         row.className = "row";
-        for(var j = 0; j < 9; j++) {
-            var cell = document.createElement("div");
+        for(let j = 0; j < 9; j++) {
+            let cell = document.createElement("div");
             cell.className = "cell"
-            var cellValue = document.createElement("div");
+            let cellValue = document.createElement("div");
             cellValue.className = "cell-value";
             cell.appendChild(cellValue);
             row.appendChild(cell);
