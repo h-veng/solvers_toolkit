@@ -16,9 +16,11 @@ function generateGameHTML () {
         row.className = "row";
         for(let j = 0; j < 9; j++) {
             let cell = document.createElement("div");
-            cell.className = "cell"
+            cell.className = "cell";
+            cell.id = "cell" + i.toString() + j.toString();
             let cellValue = document.createElement("div");
             cellValue.className = "cell-value";
+            cellValue.id = "cell-value" + i.toString() + j.toString();
             cell.appendChild(cellValue);
             row.appendChild(cell);
         }

@@ -4,13 +4,13 @@ class Sudoku {
     constructor() {
         this.ROWS = 9;
         this.COLS = 9;
-        this.values_ = [];
-        for(let i = 0; i < ROWS; i++) {
+        this.values = [];
+        for(let i = 0; i < this.ROWS; i++) {
             let row = [];
-            for(let j = 0; j < COLS; j++) {
+            for(let j = 0; j < this.COLS; j++) {
                 row.push(null);
             }
-            values.push(row);
+            this.values.push(row);
         }
     }
 
@@ -29,11 +29,12 @@ class Sudoku {
         if(row > 8) {
             return null;
         }
-        return values[row][col];
+        return this.values[row][col];
     }
 
     // get the value of the cell specified by row, col (0-indexed)
     // ignores if row/col/value are invalid
+    // updates the grid at the specified cell
     setCellValue(row, col, value) {
         if(row < 0) {
             return;
@@ -53,6 +54,11 @@ class Sudoku {
         if(value > 9) {
             return;
         }
-        values[row][col] = value;
+        this.values[row][col] = value;
+        let cellValueHTML = document.getElementById("cell-value" + row.toString() + col.toString());
+        cellValueHTML.textContent = value.toString();
     }
 }
+
+let s = new Sudoku();
+s.setCellValue(0, 0, 5);

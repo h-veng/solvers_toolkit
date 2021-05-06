@@ -6,19 +6,14 @@ body {
     color: #ededed;
 }
 
-/* Delete margin for now. Change this when up to laying stuff out. Might want to redo id as well*/
-#top-elem {
-    margin: 0px;
-}
-
 #game {
     padding: 10px;
 }
 
 #board {
     position: relative;
-    height: 90vh;
-    width: 90vh;
+    height: min(90vh, 45vw);
+    width: min(90vh, 45vw);
 }
 
 #board-layout {
@@ -50,7 +45,7 @@ body {
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    font-size: xx-large;
+    font-size: min(8vh, 4vw);
     text-align: center;
     font-family: 'Open Sans', sans-serif;
 }
