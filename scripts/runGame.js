@@ -1,6 +1,4 @@
 class Sudoku {
-  // initialize a 9x9 array with null values representing the
-  // sudoku game
   constructor() {
     this.ROWS = 9;
     this.COLS = 9;
@@ -15,8 +13,6 @@ class Sudoku {
     }
   }
 
-  // get the value of the cell specified by row, col (0-indexed)
-  // returns null if row/col are invalid
   getCellValue(row, col) {
     if (row < 0) {
       return null;
@@ -37,9 +33,6 @@ class Sudoku {
     return this.values[row][col];
   }
 
-  // get the value of the cell specified by row, col (0-indexed)
-  // ignores if row/col/value are invalid
-  // updates the grid at the specified cell
   setCellValue(row, col, value) {
     if (row < 0) {
       return;

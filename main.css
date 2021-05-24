@@ -16,11 +16,18 @@ body {
     width: min(90vh, 45vw);
 }
 
-#board-layout {
+#board-background {
     position: absolute;
     height: inherit;
     width: inherit;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
+}
+
+#board-cells {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    padding: 2px;
 }
 
 .row {
@@ -29,7 +36,7 @@ body {
     width: inherit;
     height: 11.11%;
     margin: 0px;
-    padding: 0px 1px;
+    /*padding: 0px 1px;*/
 }
 
 .row > .cell {
@@ -57,5 +64,5 @@ body {
 
 .line-box {
     stroke: #ffffff;
-    stroke-width: 4;
+    stroke-width: 5;
 }
